@@ -91,7 +91,7 @@ lowerBound = lowerBound - 1.5 * ICR # a user not to considered an outlier needs 
 upperBound = upperBound + 1.5 * ICR # between the lowerBound and upperBound
 # Remove all users whose age doesn't belong in the interval 
 # [lowerBound - 1.5 * ICR, upperBound + 1.5 * ICR]
-withoutOutliers = subset(data.users, age > lowerBound && age < upperBound)
+withoutOutliers = subset(data.users, age > lowerBound & age < upperBound)
 
 # Instead of working with raw data, sometimes it is useful to convert all different
 # attributes to be on same scale
